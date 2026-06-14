@@ -13,7 +13,7 @@ export default function Footer() {
                 🌸
               </div>
               <div className="leading-none">
-                <div className="font-serif text-sm text-white/60">bring my</div>
+                {/* <div className="font-serif text-sm text-white/60">bring my</div> */}
                 <div className="font-serif text-lg font-bold text-rose-400">flowers</div>
               </div>
             </div>
