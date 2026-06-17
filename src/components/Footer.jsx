@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-5">
           <p className="text-white/30 text-xs text-center">
-            © 2026 Bring My Flowers. All Rights Reserved. Designed by
+            © 2026 Flowers. All Rights Reserved. Designed by
           </p>
         </div>
       </div>
