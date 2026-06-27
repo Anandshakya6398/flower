@@ -376,13 +376,13 @@ const Home = () => {
                 />
 
                 {/* Discount Card */}
-                <div className="absolute top-6 right-6 bg-white p-5 rounded-3xl shadow-xl">
+                {/* <div className="hidden absolute top-6 right-6 bg-white p-5 rounded-3xl shadow-xl">
                   <p className="text-xs uppercase text-gray-400">
                     Special Offer
                   </p>
                   <h4 className="text-2xl font-bold text-rose-500">20% OFF</h4>
                   <p className="text-sm text-gray-500">First Order</p>
-                </div>
+                </div> */}
 
                 {/* Customer Card */}
                 <div className="absolute bottom-6 left-6 bg-white px-5 py-4 rounded-3xl shadow-xl">

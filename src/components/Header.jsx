@@ -16,6 +16,7 @@ const navLinks = [
   { name: "Occasions", path: "/occasions" },
   { name: "Decor", path: "/decor" },
   { name: "About Us", path: "/about" },
+  { name: "Gallery", path: "/gallery" },
 ];
 
 export default function Header() {
