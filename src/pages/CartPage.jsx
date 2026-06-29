@@ -50,7 +50,7 @@ function CheckoutModal({ isOpen, onClose, grandTotal, items }) {
     setError("");
     setSubmitting(true);
 
-    // Items ko dynamic columns mein convert karo
+
     const itemColumns = {};
     items.forEach((item, index) => {
       itemColumns[`item_${index + 1}_name`] = item.name;
@@ -237,7 +237,7 @@ function CheckoutModal({ isOpen, onClose, grandTotal, items }) {
                     className="modal-input"
                     type="email"
                     name="email"
-                    placeholder="aap@email.com"
+                    placeholder="email@gmail.com"
                     value={form.email}
                     onChange={handleChange}
                   />

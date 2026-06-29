@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Flower2, ShoppingCart, Menu, X } from "lucide-react";
 import { useSelector } from "react-redux";
 import { selectCartCount } from "../redux/cartSlice";
@@ -18,6 +18,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const cartCount = useSelector(selectCartCount);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,7 +32,6 @@ export default function Header() {
   }, [isOpen]);
 
   useEffect(() => {
-    // 950px se upar = desktop/laptop = drawer band karo
     const onResize = () => { if (window.innerWidth >= 1280) setIsOpen(false); };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -101,7 +101,7 @@ export default function Header() {
         }
         .hdr-logo-text span { color: #e11d48; }
 
-        /* Desktop nav — sirf 950px+ pe dikhega */
+        /* Desktop nav */
         .hdr-nav {
           display: none;
           align-items: center;
@@ -120,8 +120,25 @@ export default function Header() {
           padding: 8px 14px;
           border-radius: 8px;
           transition: color 0.2s, background 0.2s;
+          position: relative;
         }
         .hdr-nav-link:hover { color: #0D1F0F; background: #f3f4f6; }
+
+        /* Desktop active link */
+        .hdr-nav-link--active {
+          color: #0D1F0F !important;
+          background: #f0fdf4 !important;
+        }
+        .hdr-nav-link--active::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 14px;
+          right: 14px;
+          height: 2px;
+          background: #0D1F0F;
+          border-radius: 2px;
+        }
 
         /* Right actions */
         .hdr-actions { display: flex; align-items: center; gap: 8px; }
@@ -153,7 +170,6 @@ export default function Header() {
         }
         @media (min-width: 950px) { .hdr-cart { padding: 10px 22px; } }
 
-        /* Cart label — desktop pe dikhega */
         .hdr-cart-label { display: none; }
         @media (min-width: 950px) { .hdr-cart-label { display: inline; } }
 
@@ -172,7 +188,7 @@ export default function Header() {
         }
         @keyframes badgePop { from { transform: scale(0); } to { transform: scale(1); } }
 
-        /* Hamburger — desktop pe chhupega */
+        /* Hamburger */
         .hdr-hamburger {
           display: flex;
           padding: 9px;
@@ -212,10 +228,17 @@ export default function Header() {
           padding: 15px 0;
           border-bottom: 1px solid #f3f4f6;
           display: block;
-          transition: color 0.2s, padding-left 0.2s;
+          transition: color 0.2s, padding-left 0.2s, border-left 0.2s;
         }
         .hdr-drawer-link:last-child { border-bottom: none; }
         .hdr-drawer-link:hover { color: #e11d48; padding-left: 8px; }
+
+        /* Drawer active link */
+        .hdr-drawer-link--active {
+          color: #0D1F0F !important;
+          padding-left: 12px !important;
+          border-left: 3px solid #0D1F0F;
+        }
       `}</style>
 
       <nav style={{
@@ -244,10 +267,14 @@ export default function Header() {
             </h1>
           </Link>
 
-          {/* Desktop nav links — 950px+ only */}
+          {/* Desktop nav links */}
           <div className="hdr-nav">
             {navLinks.map((link) => (
-              <Link key={link.name} to={link.path} className="hdr-nav-link">
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`hdr-nav-link${location.pathname === link.path ? ' hdr-nav-link--active' : ''}`}
+              >
                 {link.name}
               </Link>
             ))}
@@ -265,7 +292,6 @@ export default function Header() {
               )}
             </button>
 
-            {/* Hamburger — tablet + mobile + small laptop */}
             <button className="hdr-hamburger" onClick={() => setIsOpen(true)} aria-label="Open menu">
               <Menu size={22} />
             </button>
@@ -286,7 +312,7 @@ export default function Header() {
         }}
       />
 
-      {/* Drawer — tablet + mobile */}
+      {/* Drawer */}
       <div
         className="hdr-drawer"
         style={{ transform: isOpen ? "translateX(0)" : "translateX(100%)" }}
@@ -324,7 +350,7 @@ export default function Header() {
             <Link
               key={link.name}
               to={link.path}
-              className="hdr-drawer-link"
+              className={`hdr-drawer-link${location.pathname === link.path ? ' hdr-drawer-link--active' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               {link.name}

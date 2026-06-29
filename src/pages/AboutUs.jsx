@@ -71,25 +71,25 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2016", title: "Founded", desc: "Started with one van, one vendor, and one promise — flowers that feel personal. A small studio with a big vision.", color: "#e8667a" },
-  { year: "2018", title: "Décor Division Launched", desc: "Wedding and event floristry added. Our first full mandap setup led to 40 bookings in the same month.", color: "#c9a96e" },
-  { year: "2021", title: "Subscription Model", desc: "Weekly fresh flower subscriptions launched. Homes across the city started waking up to new blooms every Monday.", color: "#a78bfa" },
-  { year: "2023", title: "Corporate Gifting", desc: "Bulk and branded floristry for offices, launches, and teams — bringing freshness to the boardroom.", color: "#34d399" },
-  { year: "2026", title: "Design Studio", desc: "Full-service floral design studio opened — from concept mood boards to day-of execution for premium events.", color: "#c9a96e" },
+  { title: "Founded", desc: "Started with one van, one vendor, and one promise — flowers that feel personal. A small studio with a big vision.", color: "#e8667a" },
+  {  title: "Décor Division Launched", desc: "Wedding and event floristry added. Our first full mandap setup led to 40 bookings in the same month.", color: "#c9a96e" },
+  { title: "Subscription Model", desc: "Weekly fresh flower subscriptions launched. Homes across the city started waking up to new blooms every Monday.", color: "#a78bfa" },
+  {  title: "Corporate Gifting", desc: "Bulk and branded floristry for offices, launches, and teams — bringing freshness to the boardroom.", color: "#34d399" },
+  {  title: "Design Studio", desc: "Full-service floral design studio opened — from concept mood boards to day-of execution for premium events.", color: "#c9a96e" },
 ];
 
 const team = [
-  { name: "anuj",  role: "Co-Founder & Creative Director", detail: "10+ years in floral design. Every arrangement carries her eye for colour and composition.", initials: "PT", accent: "#e8667a" },
-  { name: "Amit",   role: "Co-Founder & Operations",        detail: "Built the logistics backbone that makes same-day delivery feel effortless.", initials: "AT", accent: "#c9a96e" },
+  { name: "anuj",  role: "Founder & Creative Director", detail: "10+ years in floral design. Every arrangement carries her eye for colour and composition.", initials: "PT", accent: "#e8667a" },
+  { name: "Amit",   role: "Founder & Operations",        detail: "Built the logistics backbone that makes same-day delivery feel effortless.", initials: "AT", accent: "#c9a96e" },
   { name: "lorem",     role: "Head of Décor",                  detail: "Led 200+ wedding and event setups. She reads a space and sees what it wants to become.", initials: "RS", accent: "#a78bfa" },
   { name: "Kkkkk",     role: "Supply & Freshness Lead",        detail: "Former horticulturist. He's the reason every petal arrives at peak bloom.", initials: "KM", accent: "#34d399" },
 ];
 
 const stats = [
   { value: 500,   suffix: "+",   label: "Events Decorated" },
-  { value: 12000, suffix: "+",   label: "Bouquets Delivered" },
+  { value: 1200, suffix: "+",   label: "Bouquets Delivered" },
   { value: 4.9,   suffix: "★",  label: "Average Rating" },
-  { value: 8,     suffix: " yrs", label: "Of Freshness" },
+  { value: 4,     suffix: " yrs", label: "Of Freshness" },
 ];
 
 const testimonials = [
@@ -335,7 +335,7 @@ const AboutUs = () => {
                   color:"#c9a96e",fontSize:"11px",fontWeight:700,
                   letterSpacing:"0.2em",textTransform:"uppercase"
                 }}>
-                  Bring My Flowers · Est. 2016
+                  Shivam Florist · Est. 2022
                 </span>
               </div>
 
@@ -392,33 +392,6 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* ── TRUST BADGE STRIP ────────────────────────── */}
-        <section style={{ background:"#fff", borderBottom:"1px solid #f3f4f6" }}>
-          <div className="inner" style={{ padding:"0 24px" }}>
-            <div className="trust-grid" style={{ padding:"28px 0" }}>
-              {trustBadges.map(({icon:Icon,label},i)=>(
-                <div key={i} style={{
-                  display:"flex",alignItems:"center",gap:"10px",
-                  justifyContent:"center",
-                  borderRight: i < trustBadges.length-1 ? "1px solid #f3f4f6" : "none",
-                  padding:"0 12px"
-                }}>
-                  <div style={{
-                    width:"36px",height:"36px",borderRadius:"50%",
-                    background:"#fdf2f4",display:"flex",alignItems:"center",justifyContent:"center",
-                    flexShrink:0
-                  }}>
-                    <Icon size={16} style={{color:"#e8667a"}}/>
-                  </div>
-                  <span style={{
-                    fontSize:"13px",fontWeight:600,color:"#374151",
-                    lineHeight:1.3
-                  }}>{label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ── STATS STRIP ──────────────────────────────── */}
         <section style={{
@@ -490,7 +463,7 @@ const AboutUs = () => {
                     "India's flower market wastes nearly 30% of its produce daily. We set out to fix that — and make something beautiful in the process."
                   </p>
                   <p style={{color:"#c9a96e",fontSize:"12px",fontWeight:700,marginTop:"10px",letterSpacing:"0.08em"}}>
-                    — Pooja Tripathi, Co-Founder
+                    — SHIVAM, Founder
                   </p>
                 </div>
 
@@ -510,7 +483,7 @@ const AboutUs = () => {
               {/* Right */}
               <div style={{paddingTop:"4px"}}>
                 <p style={{color:"#7a5c4f",fontSize:"1rem",lineHeight:1.8,marginBottom:"18px"}}>
-                  Bring My Flowers was started in 2016 by Pooja and Amit Tripathi. The idea was disarmingly simple: what if flowers actually arrived the day they were cut, arranged by someone who cared, and delivered like they mattered?
+                  Shivam Florist was started in 2022 by SHIVAM. The idea was disarmingly simple: what if flowers actually arrived the day they were cut, arranged by someone who cared, and delivered like they mattered?
                 </p>
                 <p style={{color:"#7a5c4f",fontSize:"1rem",lineHeight:1.8,marginBottom:"18px"}}>
                   India's floriculture system is traditionally fragmented and waste-heavy. Most shops work on next-day inventory, not today's farm output. We built the opposite — a demand-first, design-first model that sources every morning and delivers every afternoon.

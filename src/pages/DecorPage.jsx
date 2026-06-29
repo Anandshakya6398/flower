@@ -12,6 +12,7 @@ import image9 from "../assets/s9.png";
 import image10 from "../assets/s10.png";
 import image11 from "../assets/s11.png";
 import image12 from "../assets/s12.png";
+import image21 from "../assets/s21.png"
 
 import {
   MessageCircle,
@@ -47,7 +48,7 @@ const galleryItems = [
   { image: image1, label: "Wedding Stage", tag: "Wedding", span: "row-span-2" },
   { image: image2, label: "Entrance Decor", tag: "Reception", span: "row-span-1" },
   { image: image3, label: "Table Centre", tag: "Corporate", span: "row-span-1" },
-  { image: image4, label: "Haldi Setup", tag: "Haldi", span: "row-span-2" },
+  { image: image21, label: "Haldi Setup", tag: "Haldi", span: "row-span-2" },
   { image: image5, label: "Floral Arch", tag: "Wedding", span: "row-span-1" },
   { image: image6, label: "Baby Shower", tag: "Baby Shower", span: "row-span-1" },
   { image: image7, label: "Mehendi Mandap", tag: "Pre-Wedding", span: "row-span-1" },
@@ -545,7 +546,7 @@ const DecorPage = () => {
                     color: "#c9a96e", fontSize: "11px", fontWeight: 700,
                     letterSpacing: "0.2em", textTransform: "uppercase"
                   }}>
-                    Floral Décor Studio · Est. 2016
+                    Floral Décor Studio · Est. 2022
                   </span>
                 </div>
               </div>
@@ -701,7 +702,7 @@ const DecorPage = () => {
                 <em className="font-display" style={{ color: "#c9a96e", fontStyle: "italic" }}>deserves to bloom.</em>
               </h2>
               <p style={{ color: "#6b7280", fontSize: "15px", lineHeight: 1.75, marginBottom: "1rem" }}>
-                At Bring My Flowers, we turn spaces into experiences. Every project begins with an expert on-site visit — we understand your vision, assess the space, and let your flower preferences, colour palette, and occasion guide the design.
+                At Shivam Florist, we turn spaces into experiences. Every project begins with an expert on-site visit — we understand your vision, assess the space, and let your flower preferences, colour palette, and occasion guide the design.
               </p>
               <p style={{ color: "#6b7280", fontSize: "15px", lineHeight: 1.75, marginBottom: "2rem" }}>
                 Once the concept is refined, we share a detailed design plan and final costing for your approval. No surprises — just beautifully planned décor, executed with freshness and finesse.
@@ -776,7 +777,7 @@ const DecorPage = () => {
                 boxShadow: "0 6px 20px rgba(201,169,110,0.4)",
                 whiteSpace: "nowrap"
               }}>
-                Est. 2016
+                Est. 2022
               </div>
             </div>
           </div>
